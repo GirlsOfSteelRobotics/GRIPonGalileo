@@ -1,10 +1,10 @@
-#define OCV
+//#define USE_CV_VIDEOCAPTURE
 
 #include <iostream>
 #include "opencv2/opencv.hpp"
 #include "GripPipeline.h"
 #include "networktables/NetworkTable.h"
-#ifndef OCV
+#ifndef USE_CV_VIDEOCAPTURE
 #include "LifecamCapture.h"
 #endif
 
@@ -22,7 +22,7 @@ int main(int argc, char** argv)
     std::vector<double> heights;
 
     // Open the default camera
-#ifdef OCV
+#ifdef USE_CV_VIDEOCAPTURE
     cv::VideoCapture cap;
 #else
     LifecamCapture cap;
@@ -49,7 +49,7 @@ int main(int argc, char** argv)
 	  center_ys.clear();
 	  widths.clear();
 	  heights.clear();
-#ifdef OCV
+#ifdef USE_CV_VIDEOCAPTURE
 	  cv::Mat frame;
           cap >> frame;
 #else
@@ -64,7 +64,7 @@ int main(int argc, char** argv)
 	  pipeline.Process(frame);
 	  //cv::imwrite("imagethresh.jpg", *(pipeline.GetHsvThresholdOutput()));
 	  contours = pipeline.GetFilterContoursOutput();
-#ifndef OCV
+#ifndef USE_CV_VIDEOCAPTURE
           cap.releaseImage();
 #endif
 	  int i = 0;

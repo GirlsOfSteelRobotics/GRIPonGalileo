@@ -213,7 +213,7 @@ bool LifecamCapture::open(int devNumber)
     return false;
   }
   if (opened) {
-    LifecamCapture::close();
+    LifecamCapture::release();
   }
   opened = openDevice(devName);
   return opened;
