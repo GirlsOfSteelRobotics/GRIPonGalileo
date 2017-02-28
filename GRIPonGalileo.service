@@ -1,0 +1,12 @@
+[Unit]
+Description=GRIP Vision Processing
+
+[Service]
+Type=simple
+RemainAfterExit=false
+ExecStart=/home/root/GRIPonGalileo
+WorkingDirectory=/home/root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
