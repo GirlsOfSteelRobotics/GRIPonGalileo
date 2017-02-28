@@ -1,4 +1,4 @@
-//#define OCV
+#define OCV
 
 #include <iostream>
 #include "opencv2/opencv.hpp"
@@ -88,6 +88,6 @@ int main(int argc, char** argv)
 	  table->PutNumberArray("width", widths);
 	  table->PutNumberArray("height", heights);
     }
-    cap.close();
+    cap.release();
     return 0;
 }

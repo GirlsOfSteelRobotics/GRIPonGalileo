@@ -294,7 +294,7 @@ void LifecamCapture::releaseImage(void)
 }
 
 
-void LifecamCapture::close(void)
+void LifecamCapture::release(void)
 {
   enum v4l2_buf_type type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
 
@@ -308,7 +308,7 @@ void LifecamCapture::close(void)
   if (munmap(buffer_start, buffer_length) == -1)
     perror("munmap");
 
-  if (::close(fd) == -1)
+  if (close(fd) == -1)
     perror("close");
 
   fd = -1;

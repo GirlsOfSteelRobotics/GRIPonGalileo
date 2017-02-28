@@ -13,7 +13,7 @@ public:
   bool isOpened(void);
   void *getImage(void);
   void releaseImage(void);
-  void close(void);
+  void release(void);
 private:
   bool    openDevice(const char *devName);
   void   *buffer_start;

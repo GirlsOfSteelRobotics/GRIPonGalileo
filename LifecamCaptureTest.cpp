@@ -40,7 +40,7 @@ int main(int argc, char **argv)
     cap.releaseImage();
   }
 
-  cap.close();
+  cap.release();
 
   return 0;
 }
