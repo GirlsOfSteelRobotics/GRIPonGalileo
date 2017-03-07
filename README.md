@@ -7,8 +7,8 @@ This repository contains documentation and source code for running GRIP vision p
 This repository's Wiki has a series of detailed set up guides:
 * [Why use the Intel Galileo for vision processing?](https://github.com/GirlsOfSteelRobotics/GRIPonGalileo/wiki/Why-Intel-Galileo)
 * [Intel Galileo setup](https://github.com/GirlsOfSteelRobotics/GRIPonGalileo/wiki/Intel-Galileo-setup)
+* [Compiling and installing GRIPonGalileo](https://github.com/GirlsOfSteelRobotics/GRIPonGalileo/wiki/Compiling-and-installing-GRIPOnGalileo)
 * [Creating the GRIP pipeline](https://github.com/GirlsOfSteelRobotics/GRIPonGalileo/wiki/Creating-the-GRIP-pipeline)
-* [Compiling and installing GRIP-Runner](https://github.com/GirlsOfSteelRobotics/GRIPonGalileo/wiki/Compiling-and-installing-GRIP-Runner)
 * [Microsoft Lifecam manual exposure details](https://github.com/GirlsOfSteelRobotics/GRIPonGalileo/wiki/Microsoft-Lifecam-manual-exposure)
 
 As an introduction, here are the three main components of the project:
