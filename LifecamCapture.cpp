@@ -113,7 +113,7 @@ bool LifecamCapture::openDevice(const char *devName)
      * Instead, 5 - 10 is a small range of very low exposures,
      * and anything above 10 is a constant, very high exposure.
      */
-    {V4L2_CID_EXPOSURE_ABSOLUTE, 0, 0, 39},
+    {V4L2_CID_EXPOSURE_ABSOLUTE, 0, 0, 19},
   };
   CLEAR(ctls);
   ctls.ctrl_class = V4L2_CTRL_CLASS_CAMERA;
